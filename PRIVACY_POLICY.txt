@@ -1,0 +1,81 @@
+POLÍTICA DE PRIVACIDADE - DEFINITIVE URL SAVER
+Última atualização: 14 de junho de 2025
+
+Esta Política de Privacidade descreve como suas informações são coletadas, usadas e compartilhadas quando você utiliza a extensão "Definitive URL Saver" para o navegador Google Chrome.
+
+1. INFORMAÇÕES QUE COLETAMOS
+
+A extensão Definitive URL Saver coleta os seguintes dados quando você a utiliza:
+
+a) URLs que você salva deliberadamente através da extensão
+b) Metadados extraídos das páginas web associadas a essas URLs (título, descrição, imagem)
+c) Data e hora do salvamento das URLs
+d) Configurações de preferências que você define para a extensão
+
+2. COMO USAMOS SUAS INFORMAÇÕES
+
+As informações coletadas são usadas exclusivamente para:
+
+a) Fornecer a funcionalidade principal da extensão: salvar, exibir, pesquisar e gerenciar as URLs que você escolheu salvar
+b) Melhorar a usabilidade da extensão e a experiência do usuário
+
+3. ARMAZENAMENTO DE DADOS
+
+Todos os dados coletados pela extensão são armazenados EXCLUSIVAMENTE no dispositivo local do usuário através do IndexedDB do navegador. Isso significa que:
+
+a) Seus dados NÃO são transmitidos para os servidores da extensão
+b) Seus dados NÃO são compartilhados com terceiros pelo desenvolvedor da extensão
+c) Seus dados permanecem sob seu controle em seu dispositivo
+
+4. FUNCIONALIDADE DE WEBHOOK (OPCIONAL)
+
+A extensão oferece uma funcionalidade OPCIONAL de webhook que permite enviar dados para serviços externos. É importante observar que:
+
+a) Esta funcionalidade é DESATIVADA por padrão
+b) Você precisa ativar explicitamente esta funcionalidade nas configurações
+c) Você precisa fornecer e configurar seu próprio endpoint para receber os dados
+d) Qualquer transmissão de dados via webhook é de sua responsabilidade e sob seu controle direto
+
+Ao utilizar o recurso de webhook, você está consentindo com a transmissão dos dados da URL (URL, título, descrição, imagem e data) para o endpoint que VOCÊ configurou.
+
+5. PERMISSÕES DO NAVEGADOR
+
+A extensão solicita as seguintes permissões por estes motivos:
+
+a) activeTab: Para acessar a URL e o conteúdo da aba atual (somente quando você decide salvar a URL)
+b) storage: Para armazenar suas URLs salvas e configurações localmente
+c) clipboardWrite: Para permitir a funcionalidade de cópia de URLs para a área de transferência
+
+6. COOKIES E TECNOLOGIAS SIMILARES
+
+A extensão não utiliza cookies. O armazenamento de dados é feito exclusivamente através do IndexedDB do navegador.
+
+7. COMPARTILHAMENTO DE DADOS
+
+Exceto quando você configura explicitamente a funcionalidade opcional de webhook, a extensão não compartilha nenhum dado com terceiros. Não vendemos ou comercializamos seus dados pessoais sob nenhuma circunstância.
+
+8. SEUS DIREITOS
+
+Como todos os dados são armazenados localmente em seu dispositivo, você mantém controle total sobre seus dados e pode:
+
+a) Visualizar todos os dados armazenados pela extensão
+b) Exportar seus dados em formatos TXT, CSV ou JSON
+c) Excluir dados individuais ou todos os dados armazenados
+d) Desinstalar a extensão a qualquer momento, o que removerá todos os dados armazenados (exceto quaisquer dados que você tenha enviado via webhook)
+
+9. PRIVACIDADE INFANTIL
+
+A extensão não é direcionada a menores de 13 anos e não coletamos intencionalmente informações pessoais de crianças abaixo dessa idade.
+
+10. ALTERAÇÕES NESTA POLÍTICA DE PRIVACIDADE
+
+Podemos atualizar esta política de privacidade de tempos em tempos para refletir mudanças em nossas práticas ou por outros motivos operacionais, legais ou regulatórios. Recomendamos que você reveja periodicamente esta política.
+
+11. ENTRE EM CONTATO CONOSCO
+
+Se você tiver dúvidas sobre esta Política de Privacidade ou sobre suas informações, entre em contato:
+
+Email: [seu-email@exemplo.com]
+GitHub: https://github.com/seu-usuario/definite-url-saver
+
+Esta política está em conformidade com os requisitos da Chrome Web Store e foi criada para proteger a privacidade dos usuários da extensão Definitive URL Saver.
