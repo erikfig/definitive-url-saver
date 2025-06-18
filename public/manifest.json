@@ -23,7 +23,6 @@
   },
   "permissions": [
     "activeTab",
-    "storage",
     "clipboardWrite"
   ],
   "host_permissions": [
