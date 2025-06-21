@@ -1,32 +1,36 @@
-export const useWebhook = (embedData: any) => {
-  // Executa chamada de webhook
-  const webhookEnabled = localStorage.getItem('webhook_enabled') === 'true';
+export const useWebhook = () => {
+  const handleWebhookCall = (embedData: any) => {
+    // Executa chamada de webhook
+    const webhookEnabled = localStorage.getItem('webhook_enabled') === 'true';
 
-  if (!webhookEnabled) {
-    return;
-  }
-
-  const webhookUrl = localStorage.getItem('webhook_url');
-  const webhookToken = localStorage.getItem('webhook_token');
-    
-  if (!webhookUrl) {
-    return
-  }
-
-  try {
-    const headers: HeadersInit = {
-      'Content-Type': 'application/json'
-    };
-    
-    if (webhookToken) {
-      headers['Authorization'] = `Bearer ${webhookToken}`;
+    if (!webhookEnabled) {
+      return;
     }
-    
-    makeRequest(webhookUrl, headers, embedData);
-  } catch (webhookError: any) {
-    console.error('Erro ao processar webhook:', webhookError);
-    alert('Erro ao processar webhook: ' + webhookError.message);
+
+    const webhookUrl = localStorage.getItem('webhook_url');
+    const webhookToken = localStorage.getItem('webhook_token');
+      
+    if (!webhookUrl) {
+      return
+    }
+
+    try {
+      const headers: HeadersInit = {
+        'Content-Type': 'application/json'
+      };
+      
+      if (webhookToken) {
+        headers['Authorization'] = `Bearer ${webhookToken}`;
+      }
+      
+      makeRequest(webhookUrl, headers, embedData);
+    } catch (webhookError: any) {
+      console.error('Erro ao processar webhook:', webhookError);
+      alert('Erro ao processar webhook: ' + webhookError.message);
+    }
   }
+
+  return { handleWebhookCall };
 }
 
 const makeRequest = async (webhookUrl: string, headers: HeadersInit, embedData: any) => {

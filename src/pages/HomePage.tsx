@@ -4,6 +4,7 @@ import { useEmbeds } from '../contexts/IndexedDbContext';
 import { CreateEmbed } from '../services/CreateEmbed'
 import { isExtension } from '../utils/environment'
 import { HomePageComponent } from './components/HomePageComponent'
+import { useWebhook } from '../hooks/useWebhook'
 
 function HomePage() {
   const [url, setUrl] = useState('')
@@ -12,6 +13,7 @@ function HomePage() {
   const { saveEmbed } = useEmbeds();
   const createEmbed = new CreateEmbed();
   const navigate = useNavigate();
+  const {handleWebhookCall} = useWebhook();
 
   useEffect(() => {
     let urlHandle = window.location.href;
@@ -47,11 +49,14 @@ function HomePage() {
       // Extrair dados da URL
       const embedData = await createEmbed.handle(url);
       
-      // Salvar no IndexedDB
-      await saveEmbed(embedData);
+      // Salvar no IndexedDB e Webhook
+      const resolver = Promise.all([
+        saveEmbed(embedData),
+        handleWebhookCall(embedData),
+      ]);
 
-      
-      
+      await resolver;
+
       // Limpar o campo
       setUrl('');
       alert('URL salva com sucesso!');

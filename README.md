@@ -64,6 +64,21 @@ Quando uma nova URL for salva, os dados serão enviados automaticamente para o e
 - `npm run build` - Compila a extensão para produção
 - `npm run lint` - Verifica o código em busca de erros
 
+## Automatização de Publicação
+
+Esta extensão utiliza GitHub Actions para automatizar o processo de build e publicação:
+
+1. **Build automático**: Cada push para a branch principal gera um novo build
+2. **Versionamento**: Criar uma tag com prefixo "v" (ex: v1.0.1) inicia o processo de publicação
+3. **Publicação na Chrome Web Store**: O workflow envia automaticamente a nova versão para revisão
+
+Para configurar a publicação automatizada:
+1. Configure as credenciais da Chrome Web Store API nos segredos do GitHub
+2. Atualize a versão no `manifest.json` antes de criar uma nova tag
+3. Crie e faça push de uma tag: `git tag v1.0.1 && git push origin v1.0.1`
+
+Consulte o arquivo [AUTOMATION.md](AUTOMATION.md) para instruções detalhadas.
+
 ## Tecnologias
 
 - React
