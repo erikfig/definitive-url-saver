@@ -2,6 +2,9 @@
 
 Uma extensão do Chrome para salvar, organizar e gerenciar suas URLs favoritas, incluindo metadados, imagens e descrições.
 
+ - [Instalar da Chrome Web Store](https://chromewebstore.google.com/detail/definitive-url-saver/jeegndlfnbahdkklhplahkofoadcgcic)
+ - [Versão mais rescente para download](https://github.com/erikfig/definitive-url-saver/releases)
+
 ## Recursos
 
 - **Salvar URLs automaticamente** com metadados (título, descrição, imagem)
